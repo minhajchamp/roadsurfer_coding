@@ -18,7 +18,6 @@ class EngineController extends AbstractController
     //         'path' => 'src/Controller/EngineController.php',
     //     ]);
     // }
-
     private $appKernel;
     public function __construct(KernelInterface $appKernel)
     {
@@ -34,8 +33,8 @@ class EngineController extends AbstractController
         // Fetch data from JSON file situated at root
         $jsonData =  file_get_contents($this->appKernel->getProjectDir() . '/request.json');
         // Process the data and create collections
-        $fruitsResult = $fruitService->createCollectionsFromJson($jsonData);
-        $vegsResult = $vegService->createCollectionsFromJson($jsonData);
+        $fruitsResult = $fruitService->processData($jsonData);
+        $vegsResult = $vegService->processData($jsonData);
         // Access the fruits and vegetables collections
         echo '<pre>';
         echo '======Fruits======';

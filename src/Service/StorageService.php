@@ -9,5 +9,5 @@ abstract class StorageService
      * @param array $data
      * @return array
      */
-    abstract public function createCollectionsFromJson($jsonData): array;
+    abstract public function processData($jsonData): array;
 }

@@ -18,7 +18,7 @@ class FruitService extends StorageService
      * @param array $data
      * @return array
      */
-    public function createCollectionsFromJson($jsonData): array
+    public function processData($jsonData): array
     {
         $jsonData = json_decode($jsonData, true);
 
