@@ -27,6 +27,7 @@ class VegetableService extends StorageService
         $this->remove('Onion');
 
         return [
+            'searched' => $this->vegetableCollection->search("Beans"),
             'vegetables' => $this->vegetableCollection->list(),
         ];
     }

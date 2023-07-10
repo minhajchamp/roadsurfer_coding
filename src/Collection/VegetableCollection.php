@@ -31,7 +31,7 @@ class VegetableCollection
     public function search(string $name): array
     {
         return $this->vegetables->filter(function ($vegetable) use ($name) {
-            return $vegetable[0] === $name;
+            return $vegetable['name'] === $name;
         })->toArray();
     }
 }

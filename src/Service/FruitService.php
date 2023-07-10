@@ -29,6 +29,7 @@ class FruitService extends StorageService
         $this->remove('Melons');
 
         return [
+            'searched' => $this->fruitCollection->search("Apples"),
             'fruits' => $this->fruitCollection->list(),
         ];
     }
