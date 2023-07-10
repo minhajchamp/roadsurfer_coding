@@ -16,7 +16,7 @@ class VegetableService extends StorageService
     /**
      * Singular function to get json data and call all functions.
      * @param array $data
-     * @return void
+     * @return array
      */
     public function createCollectionsFromJson($jsonData): array
     {
